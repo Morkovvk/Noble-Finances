@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Background */
+  --color-bg-primary: #a0f1bd; /* основний зелений фон (hero) */
+  --color-bg-secondary: #f9f9f9; /* світло-сірий фон */
+  /*тут ще темно-зелений*/
+  --color-bg-white: #ffffff; /* білий фон */
+  --color-bg-subtle: #f4f7f5; /* дуже світлий зелено-білий фон */
+
+  /* Accents */
+  --color-accent-1: #d2f8dc; /* світло-зелений акцент */
+  --color-accent-2: #d7d7d7; /* сірий акцент */
+
+  /* Text */
+  /*тут ще білий*/
+  --color-text-primary: #2e4f21; /* темний зелений — основний текст/заголовки, і водночас dividers-колір (та сама змінна, роль подвійна) */
+  --color-text-body: #506349; /* текст параграфів */
+  --color-text-muted: #7d9276; /* другорядний, приглушений текст */
+  --color-text-light: #d5e4d0; /* найсвітліший текст */
+
+  --color-dividers: #c7c7c7;
+
+  --font-body: "Work Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-white);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
