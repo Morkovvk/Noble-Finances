@@ -43,5 +43,103 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
+}
+
+.site-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  background-color: var(--color-bg-primary);
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  gap: 20px;
+  padding: 44px 0;
+}
+nav a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  padding: 8px 16px;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
+  border-radius: 25px;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.nav-link:hover {
+  color: var(--color-bg-white);
+  background-color: var(--color-text-primary);
+}
+
+.btn-nav {
+  color: var(--color-bg-white);
+  background-color: var(--color-text-primary);
+}
+
+.btn-nav:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+}
+
+.hero {
+  background-color: var(--color-bg-primary);
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+
+.hero-text {
+  max-width: 691px;
+
+  & h1 {
+    padding-top: 60px;
+    font-weight: 400;
+    font-size: 5rem; /* 80px */
+    line-height: 1; /* 100% */
+    letter-spacing: -0.08em; /* -8% */
+  }
+
+  & p {
+    margin-top: 24px;
+    font-weight: 400;
+    font-size: 1rem; /* 16px */
+    line-height: 1.1; /* 110% */
+    letter-spacing: -0.045em; /* -4.5% */
+  }
+
+  & .btn-hero {
+    margin-top: 50px;
+    padding: 12px;
+    color: var(--color-bg-white);
+    background-color: var(--color-text-primary);
+    border-radius: 25px;
+    transition:
+      background-color 0.5s,
+      color 0.5s;
+    border: none;
+
+    &:hover {
+      color: var(--color-text-primary);
+      background-color: var(--color-bg-primary);
+    }
+  }
+}
+
+.hero-image {
+  min-width: 0;
 }
