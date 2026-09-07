@@ -277,7 +277,7 @@ p {
 }
 
 .testimonials {
-  margin: 120px auto;
+  margin: 120px auto 100px;
   max-width: 1080px;
   background-color: var(--color-bg-white);
 
@@ -389,4 +389,10 @@ p {
       }
     }
   }
+}
+
+.full-bleed-image {
+  width: 100vw;
+  /* margin-left: 50%;
+  transform: translateX(-50%); */
 }
