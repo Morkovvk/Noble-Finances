@@ -242,7 +242,7 @@ p {
   margin: 80px 100px 80px 0;
 
   & h3 {
-    font-size: 2.5rem; /* 40px ÷ 16 */   
+    font-size: 2.5rem; /* 40px ÷ 16 */
     margin-bottom: 40px;
   }
 
@@ -399,7 +399,7 @@ p {
 
 .benefits {
   margin: 80px 0 120px;
-  
+
   .benefit-text {
     display: flex;
     margin-bottom: 160px;
@@ -419,44 +419,42 @@ p {
     min-height: 330px;
 
     & > div {
-    position: relative;
-     padding: 20px 20px 0 50px;
-     
-    ::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 1px;
-      height: 100%;
-      background-color: var(--color-text-body);
+      position: relative;
+      padding: 20px 20px 0 50px;
+
+      ::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background-color: var(--color-text-body);
+      }
+    }
+
+    & .content-card {
+      min-width: 386px;
+      gap: 20px;
+
+      & > * {
+        margin-bottom: 16px;
+      }
+
+      & > *:last-child {
+        margin-bottom: 0;
+      }
+
+      & h3 {
+        font-size: 1.875rem; /* 30px */
+      }
+    }
+
+    & .small-wdth {
+      max-width: 336px;
+    }
+    & .small-width {
+      max-width: 256px;
     }
   }
-
- & .content-card {
-  min-width: 386px;
-  gap: 20px;
-  
-  & > * {
-    margin-bottom: 16px;
-  }
-
-  & > *:last-child {
-    margin-bottom: 0;
-  }
-  
-  & h3 {
-  font-size: 1.875rem; /* 30px */
-  }
-}
-
-& .small-wdth {
-  max-width: 336px;
-}
-& .small-width {
-  max-width: 256px;
-}
-
-
-}  
 }
