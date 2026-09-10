@@ -160,6 +160,7 @@ nav a {
     color 0.5s;
   border: none;
   cursor: pointer;
+  font-family: var (var(--font-body));
 
   &:hover {
     color: var(--color-text-primary);
@@ -497,5 +498,29 @@ p {
         background-color: var(--color-bg-secondary);
       }
     }
+  }
+}
+.experts {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  padding: 160px 120px;
+  display: block;
+  text-align: center;
+  background-color: var(--color-bg-secondary);
+
+  & h2 {
+    max-width: 1040px;
+    font-size: 3.5rem;
+    margin: 0 auto 60px;
+  }
+  & .btn {
+    padding: 24px 30px;
+    border-radius: 88px;
+    font-weight: 500;
+    font-size: 0.9375rem; /* 15px ÷ 16 */
+    line-height: 1; /* 100% */
+    letter-spacing: -0.02em; /* -2% */
   }
 }
