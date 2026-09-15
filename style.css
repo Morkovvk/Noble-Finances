@@ -542,8 +542,8 @@ p {
           content: "";
           position: absolute;
           top: 0;
-          left: 0; /* збігається з padding, щоб лінія починалась там само, де текст */
-          width: 250px; /* точну довжину подивись у Figma, як завжди */
+          left: 0;
+          width: 250px;
           height: 1px;
           background-color: var(--color-text-body);
         }
@@ -599,6 +599,106 @@ p {
   }
 }
 
+@media (min-width: 800px) and (max-width: 1279px) {
+  .testimonials {
+    margin: 100px;
+    max-width: none;
+
+    & h2 {
+      font-size: 3rem;
+    }
+  }
+
+  .test-content {
+    gap: 28px;
+
+    & .test-clients {
+      & blockquote {
+        font-size: 1.5rem;
+      }
+
+      & .test-author {
+        gap: 28px;
+      }
+    }
+  }
+}
+@media (max-width: 799px) {
+  .testimonials {
+    margin: 36px;
+    max-width: none;
+    padding: 24px 16px;
+
+    & h2 {
+      margin-bottom: 40px;
+      font-size: 2.8rem;
+    }
+  }
+
+  .test-content {
+    flex-direction: column;
+    gap: 40px;
+
+    & .test-job {
+      flex: none;
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+
+      & > div {
+        padding: 16px 12px;
+        height: 113px;
+
+        &.active {
+          & h3 {
+            &::before {
+              background-color: var(--color-text-muted);
+            }
+          }
+          & p {
+            color: var(--color-text-muted);
+          }
+        }
+
+        & h3 {
+          padding: 8px 0;
+          margin: 0;
+          color: var(--color-text-primary);
+          font-size: 0.75rem;
+
+          &::before {
+            width: 66px;
+            background-color: var(--color-text-muted);
+          }
+        }
+
+        & p {
+          color: var(--color-text-muted);
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    & .test-clients {
+      padding: 40px 0 0;
+      ::before {
+        width: 0;
+      }
+
+      & blockquote {
+        font-size: 1.2rem;
+      }
+
+      & .test-author {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/*======= section full-bleed-image ======= */
 .full-bleed-image {
   max-width: none;
   width: 100vw;
@@ -606,6 +706,7 @@ p {
   transform: translateX(-50%);
 }
 
+/*======== section benefits =========*/
 .benefits {
   margin: 80px 0 120px;
 
@@ -668,6 +769,7 @@ p {
   }
 }
 
+/* ======= section cta =======*/
 .cta {
   display: flex;
   flex: 1;
@@ -708,6 +810,8 @@ p {
     }
   }
 }
+
+/* ======= section experts ======== */
 .experts {
   width: 100vw;
   margin-left: 50%;
@@ -733,6 +837,7 @@ p {
   }
 }
 
+/* ======== footer ======== */
 .foot {
   width: 100vw;
   margin-left: 50%;
