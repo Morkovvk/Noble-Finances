@@ -311,6 +311,38 @@ p {
   }
 }
 
+@media (min-width: 800px) and (max-width: 1279px) {
+  .intro {
+    margin: 120px 24px 100px;
+
+    & h2 {
+      max-width: none;
+      margin: 0 0 28px;
+      font-size: 3rem;
+    }
+
+    & .btn {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .intro {
+    margin: 120px 16px 84px;
+
+    & h2 {
+      max-width: none;
+      margin: 0 0 28px;
+      font-size: 2rem;
+    }
+
+    & .btn {
+      font-size: 0.75rem;
+    }
+  }
+}
+
 .card {
   display: flex;
   align-items: center;
@@ -368,6 +400,94 @@ p {
   }
 }
 
+@media (min-width: 800px) and (max-width: 1279px) {
+  .card {
+    margin: 20px 24px;
+    width: 100%;
+    max-width: fit-content;
+    gap: 60px;
+  }
+
+  .img-card {
+    margin: 64px 0 64px 50px;
+    max-width: 296px;
+  }
+
+  .card-content {
+    max-width: none;
+    margin: 64px 50px 64px 0;
+
+    & h3 {
+      font-size: 2rem;
+      margin-bottom: 24px;
+    }
+
+    & p {
+      margin-bottom: 54px;
+    }
+
+    & span {
+      margin-right: 8px;
+    }
+  }
+
+  .card-reverse {
+    & .card-content {
+      margin: 64px 0 64px 50px;
+      gap: 60px;
+
+      & h3,
+      & p {
+        padding-right: 24px;
+      }
+    }
+
+    & .img-card {
+      margin: 95px 50px 95px 0;
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 16px 16px 16px 16px;
+    padding: 40px 16px;
+    max-width: none;
+    min-width: 343px;
+  }
+
+  .img-card {
+    margin: 0;
+  }
+
+  .card-content {
+    max-width: none;
+    margin: 0;
+
+    & h3 {
+      font-size: 1.7rem;
+      margin-bottom: 24px;
+    }
+  }
+
+  .card-reverse {
+    align-self: center;
+
+    & .card-content {
+      margin: 0;
+    }
+
+    &,
+    .img-card {
+      margin: 0;
+    }
+  }
+}
+
+/* =========== testimonials ======*/
 .testimonials {
   margin: 120px auto 100px;
   max-width: 1080px;
