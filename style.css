@@ -884,12 +884,11 @@ p {
         margin-bottom: 0;
       }
     }
-
-    & .small-wdth {
-      max-width: 336px;
-    }
-    & .small-width {
+    & .benefit-descr {
       max-width: 256px;
+    }
+    & .benefit-descr--wide {
+      max-width: 336px;
     }
   }
 }
@@ -934,10 +933,7 @@ p {
         }
       }
 
-      & .small-wdth {
-        max-width: 560px;
-      }
-      & .small-width {
+      & .benefit-descr {
         max-width: 560px;
       }
     }
@@ -985,10 +981,7 @@ p {
         }
       }
 
-      & .small-wdth {
-        max-width: 560px;
-      }
-      & .small-width {
+      & .benefit-descr {
         max-width: 560px;
       }
     }
