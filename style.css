@@ -1,7 +1,92 @@
-* {
+/* ============================================================
+   1. RESET
+   ============================================================ */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+* {
   margin: 0;
   padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.cta :focus-visible,
+.foot :focus-visible {
+  outline-color: var(--color-text-light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 :root {
@@ -30,49 +115,41 @@ body {
   font-family: var(--font-body);
   background-color: var(--color-bg-white);
   color: var(--color-text-primary);
-  line-height: 1.6;
   overflow-x: hidden;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.05; /* 105% */
 }
 
 h2 {
-  font-family: var(--font-body);
-  font-weight: 400;
-  line-height: 1.05; /* 105% */
   letter-spacing: -0.07em; /* -7% */
 }
 
 h3 {
-  font-family: var(--font-body);
-  font-weight: 400;
-  line-height: 1.05;
   letter-spacing: -0.045em;
 }
 
 .heading-2 {
   font-size: 3.75rem;
 }
+
 .heading-3 {
   font-size: 2.5rem;
 }
 
 .heading-4 {
   font-size: 1.8rem;
-  font-family: var(--font-body);
-  font-weight: 400;
-  line-height: 1.05;
   letter-spacing: -0.045em;
 }
 
 .heading-5 {
-  font-family: var(--font-body);
   font-size: 1.125rem;
   font-weight: 300;
-  line-height: 1.05;
   letter-spacing: -0.045em;
   margin-bottom: 16px;
   position: relative;
@@ -258,7 +335,6 @@ nav a {
     color 0.5s;
   border: none;
   cursor: pointer;
-  font-family: var (var(--font-body));
 
   &:hover {
     color: var(--color-text-primary);
