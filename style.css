@@ -500,12 +500,17 @@ p {
     margin-bottom: 70px;
   }
 
-  & span {
+  & .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  & .tag {
     background-color: var(--color-bg-white);
     color: var(--color-text-body);
     padding: 12px;
     border-radius: 8px;
-    margin-right: 10px;
     transition:
       background-color 0.5s,
       color 0.5s;
@@ -552,10 +557,6 @@ p {
 
     & p {
       margin-bottom: 54px;
-    }
-
-    & span {
-      margin-right: 8px;
     }
   }
 
