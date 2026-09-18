@@ -460,7 +460,7 @@ p {
 
 @media (max-width: 799px) {
   .intro {
-    margin: 120px 16px 84px;
+    margin: 120px 16px 100px;
 
     & h2 {
       max-width: none;
@@ -581,7 +581,7 @@ p {
     display: flex;
     flex-direction: column;
     align-self: center;
-    margin: 16px 16px 16px 16px;
+    margin: 0 16px 16px;
     padding: 40px 16px;
     max-width: none;
     min-width: 343px;
@@ -607,8 +607,7 @@ p {
       margin: 0;
     }
 
-    &,
-    .img-card {
+    & .img-card {
       margin: 0;
     }
   }
