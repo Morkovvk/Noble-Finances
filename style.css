@@ -1,6 +1,6 @@
-/* ============================================================
+/* ========================================
    1. RESET
-   ============================================================ */
+   ======================================*/
 
 *,
 *::before,
@@ -90,6 +90,7 @@ p {
 }
 
 :root {
+  --gutter: 1rem;
   /* Background */
   --color-bg-primary: #a0f1bd; /* основний зелений фон (hero) */
   --color-bg-secondary: #f9f9f9; /* світло-сірий фон */
@@ -109,6 +110,12 @@ p {
   --font-body: "Work Sans", sans-serif;
   --font-accent:
     "DM Sans", sans-serif; /* для дрібних підписів типу "Services" */
+}
+
+@media (min-width: 50em) {
+  :root {
+    --gutter: 1.5rem;
+  }
 }
 
 body {
@@ -191,7 +198,7 @@ h3 {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0;
+  padding-inline: var(--gutter);
 }
 
 /*.btn, .p-link &span & p*/
@@ -275,14 +282,14 @@ nav a {
 
 @media (min-width: 800px) and (max-width: 1279px) {
   nav {
-    padding: 35px 24px;
+    padding: 35px 0;
     font-size: 0.75rem;
   }
 }
 
 @media (max-width: 799px) {
   nav {
-    padding: 28px;
+    padding: 28px 0;
     font-size: 0.75rem;
   }
   nav ul {
@@ -445,7 +452,7 @@ p {
 
 @media (min-width: 800px) and (max-width: 1279px) {
   .intro {
-    margin: 120px 24px 100px;
+    margin: 120px 0 100px;
 
     & h2 {
       max-width: none;
@@ -460,7 +467,7 @@ p {
 
 @media (max-width: 799px) {
   .intro {
-    margin: 120px 16px 100px;
+    margin: 120px 0 100px;
 
     & h2 {
       max-width: none;
@@ -536,7 +543,7 @@ p {
 
 @media (min-width: 800px) and (max-width: 1279px) {
   .card {
-    margin: 20px 24px;
+    margin: 20px 0;
     width: 100%;
     max-width: fit-content;
     gap: 60px;
@@ -582,7 +589,7 @@ p {
     display: flex;
     flex-direction: column;
     align-self: center;
-    margin: 0 16px 16px;
+    margin: 0 0 16px;
     padding: 40px 16px;
     max-width: none;
     width: auto;
@@ -725,8 +732,9 @@ p {
 
 @media (min-width: 800px) and (max-width: 1279px) {
   .testimonials {
-    margin: 100px;
+    margin: 100px 0;
     max-width: none;
+    padding: 0 76px;
   }
 
   .test-content {
@@ -745,11 +753,11 @@ p {
 }
 @media (max-width: 799px) {
   .testimonials {
-    margin: 36px;
     max-width: none;
-    padding: 24px 16px;
+    margin: 36px 0;
+    padding: 24px 20px;
 
-    & h5 {
+    & h2 {
       margin-bottom: 40px;
     }
   }
@@ -761,6 +769,7 @@ p {
     & .test-job {
       flex: none;
       width: 100%;
+      padding: 0 16px;
 
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -800,7 +809,7 @@ p {
     }
 
     & .test-clients {
-      padding: 40px 0 0;
+      padding: 0 16px 0;
       &::before {
         display: none;
       }
@@ -811,6 +820,7 @@ p {
 
       & .test-author {
         margin-bottom: 0;
+        gap: 28px;
       }
     }
   }
@@ -895,7 +905,7 @@ p {
 
 @media (min-width: 800px) and (max-width: 1279px) {
   .benefits {
-    margin: 80px 40px 120px;
+    margin: 80px 0 120px;
 
     & .benefit-text {
       margin-bottom: 100px;
@@ -942,7 +952,7 @@ p {
 
 @media (max-width: 799px) {
   .benefits {
-    margin: 80px 16px;
+    margin: 80px 0;
 
     & .benefit-text {
       display: grid;
@@ -1038,7 +1048,7 @@ p {
 
 @media (min-width: 800px) and (max-width: 1279px) {
   .cta {
-    margin: 50px 40px;
+    margin: 50px 0;
 
     & .content-cta {
       max-width: none;
@@ -1061,7 +1071,7 @@ p {
 
 @media (max-width: 799px) {
   .cta {
-    margin: 50px 40px;
+    margin: 50px 0;
     grid-template-columns: 1fr;
 
     & .content-cta {
@@ -1099,7 +1109,12 @@ p {
 }
 @media (min-width: 800px) and (max-width: 1279px) {
   .experts {
-    padding: 160px 80px;
+    padding: 160px 56px;
+
+    & h2 {
+      max-width: none;
+      font-size: 3.75rem;
+    }
   }
 }
 @media (max-width: 799px) {
@@ -1114,7 +1129,7 @@ p {
   transform: translateX(-50%);
   background-color: var(--color-text-primary);
   color: var(--color-bg-white);
-  padding: 32px 40px;
+  padding: 32px 0;
 
   & .site-nav {
     padding: 0 0 236px;
@@ -1181,8 +1196,6 @@ p {
 
 @media (min-width: 800px) and (max-width: 1279px) {
   .foot {
-    padding: 32px;
-
     & .site-nav {
       padding-bottom: 232px;
 
@@ -1209,7 +1222,7 @@ p {
 
 @media (max-width: 799px) {
   .foot {
-    padding: 32px 24px;
+    padding: 32px 0;
 
     & .site-nav {
       padding-bottom: 85px;
