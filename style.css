@@ -110,6 +110,43 @@ p {
   --font-body: "Work Sans", sans-serif;
   --font-accent:
     "DM Sans", sans-serif; /* для дрібних підписів типу "Services" */
+
+  --radius-pill: 3.33rem;
+  --transition: 0.2s ease;
+}
+
+.btn {
+  --btn-fg: var(--color-bg-white);
+  --btn-bg: var(--color-text-primary);
+  --btn-fg-hover: var(--color-text-primary);
+  --btn-bg-hover: var(--color-bg-primary);
+
+  display: inline-block;
+  padding: 0.75rem;
+  border-radius: var(--radius-pill);
+  font: inherit;
+  text-decoration: none;
+  background-color: var(--btn-bg);
+  color: var(--btn-fg);
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--btn-bg-hover);
+  color: var(--btn-fg-hover);
+}
+
+.btn:active {
+  background-color: var(--color-bg-secondary);
+  color: var(--btn-fg-hover);
+}
+
+/* варіант для темних фонів: футер, cta-панель */
+.btn--invert {
+  --btn-fg: var(--color-text-primary);
+  --btn-bg: var(--color-bg-white);
 }
 
 @media (min-width: 50em) {
@@ -224,6 +261,7 @@ nav ul {
   justify-content: space-around;
   list-style: none;
   gap: 32px;
+  align-items: center;
 }
 nav a {
   text-decoration: none;
@@ -246,20 +284,7 @@ nav a {
   background-color: var(--color-text-primary);
 }
 
-.btn-nav {
-  color: var(--color-bg-white);
-  background-color: var(--color-text-primary);
-
-  &:hover {
-    color: var(--color-text-primary);
-    background-color: var(--color-bg-primary);
-  }
-
-  &:active {
-    color: var(--color-text-primary);
-    background-color: var(--color-bg-secondary);
-  }
-
+.btn {
   & .full-text {
     display: inline;
   }
@@ -328,28 +353,6 @@ nav a {
 
   & p {
     margin-bottom: 50px;
-  }
-}
-
-.btn {
-  padding: 12px;
-  color: var(--color-bg-white);
-  background-color: var(--color-text-primary);
-  border-radius: 25px;
-  transition:
-    background-color 0.5s,
-    color 0.5s;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    color: var(--color-text-primary);
-    background-color: var(--color-bg-primary);
-  }
-
-  &:active {
-    color: var(--color-text-primary);
-    background-color: var(--color-bg-secondary);
   }
 }
 
@@ -437,15 +440,6 @@ p {
 
   & p {
     margin-bottom: 28px;
-  }
-
-  & .btn:hover {
-    background-color: var(--color-bg-secondary);
-    color: var(--color-text-primary);
-  }
-
-  & .btn:active {
-    background-color: var(--color-bg-primary);
   }
 }
 
@@ -922,6 +916,7 @@ p {
 @media (min-width: 800px) and (max-width: 1279px) {
   .benefits {
     margin-block: 80px 120px;
+    padding-inline: 40px;
 
     & .benefit-text {
       margin-bottom: 100px;
@@ -968,19 +963,9 @@ p {
     }
 
     & .btn {
-      background-color: var(--color-bg-white);
-      color: var(--color-text-primary);
       margin-bottom: 0;
-
-      &:hover {
-        color: var(--color-text-primary);
-        background-color: var(--color-bg-primary);
-      }
-
-      &:active {
-        color: var(--color-text-primary);
-        background-color: var(--color-bg-secondary);
-      }
+      padding: 12px;
+      font-size: 0.75rem;
     }
   }
 
@@ -1085,23 +1070,8 @@ p {
       justify-content: flex-start;
       font-size: 0.75rem;
 
-      & a {
+      & .nav-link {
         color: var(--color-bg-white);
-      }
-
-      & .btn-nav {
-        background-color: var(--color-bg-white);
-        color: var(--color-text-primary);
-
-        &:hover {
-          color: var(--color-text-primary);
-          background-color: var(--color-bg-primary);
-        }
-
-        &:active {
-          color: var(--color-text-primary);
-          background-color: var(--color-bg-secondary);
-        }
       }
     }
 
