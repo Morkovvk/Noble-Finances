@@ -274,7 +274,6 @@ nav {
 }
 nav ul {
   display: flex;
-  justify-content: space-around;
   list-style: none;
   gap: var(--space-32);
   align-items: center;
@@ -619,6 +618,7 @@ p {
 
   & .test-clients {
     flex: 1; /* займає все залишкове місце */
+    min-width: 0;
     position: relative; /* потрібен як "точка відліку" для ::before */
     padding-block: 0;
     padding-inline: var(--space-40) var(--space-24);
@@ -703,7 +703,6 @@ p {
       flex: none;
       width: 100%;
       padding: 0 var(--space-16);
-
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 0;
@@ -793,7 +792,6 @@ p {
 
   & .benefit-card {
     display: flex;
-    flex: 1;
     justify-content: space-between;
     min-height: 330px;
 
@@ -814,16 +812,11 @@ p {
     }
 
     & .content-card {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-24);
       min-width: 386px;
-      gap: var(--space-20);
-
-      & > * {
-        margin-bottom: var(--space-16);
-      }
-
-      & > *:last-child {
-        margin-bottom: 0;
-      }
+      align-items: flex-start;
     }
     & .benefit-descr {
       max-width: 256px;
@@ -836,8 +829,7 @@ p {
 @media (max-width: 1279px) {
   .benefits {
     & .benefit-card {
-      display: grid;
-      grid-template-columns: 1fr;
+      flex-direction: column;
       width: 100%;
       gap: var(--space-20);
 
@@ -852,14 +844,6 @@ p {
         min-width: 0;
         width: 100%;
         padding: var(--space-20) 0;
-
-        & > * {
-          margin-bottom: var(--space-32);
-        }
-
-        & > *:last-child {
-          margin-bottom: 0;
-        }
       }
 
       & .benefit-descr {
@@ -890,7 +874,7 @@ p {
     margin-block: var(--space-80) 0;
 
     & .benefit-text {
-      display: grid;
+      flex-direction: column;
       margin-bottom: var(--space-80);
       gap: var(--space-32);
 
