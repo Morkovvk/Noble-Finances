@@ -17,43 +17,45 @@
     />
   </head>
   <body>
-    <nav class="site-nav">
+    <header class="site-header">
       <div class="container">
-        <ul>
-          <li><a href="#top" class="logo">Noble Finances</a></li>
-        </ul>
-        <ul>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li>
-            <a href="#experts" class="btn">
-              <span class="full-text">Book an appointment</span>
-              <span class="short-text">Book</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <header class="hero">
-      <div class="container">
-        <div class="hero-text">
-          <h1>Financial Clarity You Can Trust</h1>
-          <p>
-            Trusted financial guidance for every stage of life and business
-            since 1987
-          </p>
-          <a href="#experts" class="btn label-text">
-            Connect with our experts
-          </a>
-        </div>
-        <img
-          class="hero-image"
-          src="images/planet.png"
-          alt="Financial Clarity"
-        />
+        <a class="logo" href="#top">Noble Finances</a>
+
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a class="nav-link" href="#services">Services</a></li>
+
+            <li>
+              <a class="btn" href="#experts">
+                <span class="full-text">Book an appointment</span>
+                <span class="short-text">Book</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-text">
+            <h1>Financial Clarity You Can Trust</h1>
+            <p>
+              Trusted financial guidance for every stage of life and business
+              since 1987
+            </p>
+            <a href="#experts" class="btn label-text">
+              Connect with our experts
+            </a>
+          </div>
+          <img
+            class="hero-image"
+            src="images/planet.png"
+            alt="Financial Clarity"
+          />
+        </div>
+      </section>
       <section id="services" class="services container">
         <div class="intro">
           <p class="p-link">Services</p>
@@ -242,32 +244,35 @@
             stress-free. Get started with Noble Finance today!
           </h2>
           <!-- чекаємо на контакти -->
-          <a href="#" class="btn">Connect with our experts</a>
+          <a href="#experts" class="btn">Connect with our experts</a>
         </div>
       </section>
     </main>
 
     <footer class="foot">
-      <nav class="site-nav">
-        <div class="container">
-          <ul>
-            <li><a href="#top" class="logo">Noble Finances</a></li>
-          </ul>
+      <div class="container">
+        <a class="logo logo--footer" href="#top">Noble Finances</a>
+
+        <nav class="site-nav site-nav--footer" aria-label="Footer">
           <ul class="link-btn">
-            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a class="nav-link" href="#services">Services</a></li>
+
             <li>
-              <a href="#experts" class="btn btn--invert">Book an appointment</a>
+              <a class="btn btn--invert" href="#experts">Book an appointment</a>
             </li>
           </ul>
+        </nav>
+      </div>
+      <div class="container footer-about">
+        <div class="footer-meta">
+          <p class="label-text slogan">Financial Clarity You Can Trust</p>
+
+          <p class="label-text description">
+            Trusted financial guidance for every stage of life and business
+            since 1987
+          </p>
         </div>
-      </nav>
-      <div class="container parent">
-        <p class="label-text">Financial Clarity You Can Trust</p>
-        <p class="label-text">
-          Trusted financial guidance for every stage of life and business since
-          1987
-        </p>
-        <p class="label-text">&copy; 2025 All Rights Reserved</p>
+        <p class="label-text copyright">&copy; 2025 All Rights Reserved</p>
       </div>
     </footer>
     <script src="script.js"></script>
