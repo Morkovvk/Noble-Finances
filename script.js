@@ -1,28 +1,27 @@
-const jobs = document.querySelectorAll(".test-job > div");
-const quotes = document.querySelectorAll(".test-clients > div");
+const tabs = document.querySelectorAll('[role="tab"]');
+const panels = document.querySelectorAll(".test-clients > figure");
 
-jobs.forEach(function (job, index) {
-  job.addEventListener("click", function () {
+tabs.forEach(function (tab) {
+  const id = tab.getAttribute("aria-controls");
+  const panel = document.getElementById(id);
+
+  tab.addEventListener("click", function () {
     // 1. прибрати .active з УСІХ jobs
-    jobs.forEach(function (j) {
-      j.classList.remove("active");
+    tabs.forEach(function (j) {
+      j.setAttribute("aria-selected", "false");
     });
-
     // 2. додати .active на ЦЕЙ job
-    job.classList.add("active");
-
+    tab.setAttribute("aria-selected", "true");
     // 3. сховати всі quotes
-    quotes.forEach(function (quote) {
-      quote.style.display = "none";
+    panels.forEach(function (p) {
+      p.hidden = true;
     });
-
-    // 4. показати quotes[index] — саме той, що відповідає клікнутому job
-    quotes[index].style.display = "flex"; // 'flex', бо .test-clients > div має display: flex
+    panel.hidden = false;
   });
 });
 
 // Початковий стан при завантаженні сторінки: перший job активний, перша quote видима
-jobs[0].classList.add("active");
-quotes.forEach(function (quote, index) {
-  quote.style.display = index === 0 ? "flex" : "none";
+tabs[0].setAttribute("aria-selected", "true");
+panels.forEach(function (panel, index) {
+  panel.hidden = index !== 0;
 });

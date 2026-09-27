@@ -150,28 +150,54 @@
       <section class="testimonials container">
         <h2 class="heading-2">Hear From Our Happy Clients</h2>
         <div class="test-content">
-          <div class="test-job">
-            <div>
-              <h5 class="heading-5">Graphic Designer</h5>
-              <p class="label-text">Ontario, Canada</p>
-            </div>
-            <div>
-              <h5 class="heading-5">Commercial Photographer</h5>
-              <p class="label-text">Ontario, Canada</p>
-            </div>
-            <div>
-              <h5 class="heading-5">Stylist</h5>
-              <p class="label-text">Austin, Texas</p>
-            </div>
+          <div class="test-job" role="tablist" aria-label="Client testimonials">
+            <button
+              class="tab"
+              type="button"
+              id="tab-1"
+              role="tab"
+              aria-controls="panel-1"
+              aria-selected="true"
+            >
+              <span class="heading-5">Graphic Designer</span>
+              <span class="label-text">Ontario, Canada</span>
+            </button>
+            <button
+              class="tab"
+              type="button"
+              id="tab-2"
+              role="tab"
+              aria-controls="panel-2"
+              aria-selected="false"
+            >
+              <span class="heading-5">Commercial Photographer</span>
+              <span class="label-text">Ontario, Canada</span>
+            </button>
+            <button
+              class="tab"
+              type="button"
+              id="tab-3"
+              role="tab"
+              aria-controls="panel-3"
+              aria-selected="false"
+            >
+              <span class="heading-5">Stylist</span>
+              <span class="label-text">Austin, Texas</span>
+            </button>
           </div>
 
           <div class="test-clients">
-            <div>
+            <figure
+              id="panel-1"
+              class="testimonial"
+              role="tabpanel"
+              aria-labelledby="tab-1"
+            >
               <blockquote>
                 "Managing my taxes as a freelancer used to be overwhelming, but
                 Noble Finance made it effortless.”
               </blockquote>
-              <div class="test-author">
+              <figcaption class="test-author">
                 <img
                   src="images/Taylor.png"
                   alt=""
@@ -181,15 +207,20 @@
                   decoding="async"
                 />
                 <p>Taylor M., 28 years old</p>
-              </div>
-            </div>
+              </figcaption>
+            </figure>
 
-            <div>
+            <figure
+              id="panel-2"
+              class="testimonial"
+              role="tabpanel"
+              aria-labelledby="tab-2"
+            >
               <blockquote>
                 "From invoicing to tax prep, Noble Finance has been a
                 game-changer for my freelance business.”
               </blockquote>
-              <div class="test-author">
+              <figcaption class="test-author">
                 <img
                   src="images/Markus.png"
                   alt=""
@@ -199,14 +230,20 @@
                   decoding="async"
                 />
                 <p>Markus N., 31 years old</p>
-              </div>
-            </div>
-            <div>
+              </figcaption>
+            </figure>
+
+            <figure
+              id="panel-3"
+              class="testimonial"
+              role="tabpanel"
+              aria-labelledby="tab-3"
+            >
               <blockquote>
                 "I used to worry about missing deductions, but with Noble
                 Finance, I know I’m maximizing my savings.”
               </blockquote>
-              <div class="test-author">
+              <figcaption class="test-author">
                 <img
                   src="images/Margaret.png"
                   alt=""
@@ -216,8 +253,8 @@
                   decoding="async"
                 />
                 <p>Margaret L., 24 years old</p>
-              </div>
-            </div>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
