@@ -629,8 +629,13 @@ p {
   & .test-job {
     flex: 0 0 310px; /* не росте, не стискається, базовий розмір рівно 310px */
 
-    & > div {
-      height: 128px;
+    & > .tab {
+      display: flex;
+      flex-direction: column;
+      font: inherit;
+      width: 100%;
+      text-align: left;
+      min-height: 128px;
       padding: var(--space-20) var(--space-32);
       color: var(--color-text-body);
       cursor: pointer;
@@ -638,11 +643,11 @@ p {
         background-color 0.5s,
         color 0.5s;
 
-      &.active {
+      &[aria-selected="true"] {
         background-color: var(--color-text-primary);
         border-radius: var(--radius-sm);
 
-        & h5 {
+        & .heading-5 {
           color: var(--color-bg-white);
 
           &::before {
@@ -650,12 +655,12 @@ p {
           }
         }
 
-        & p {
+        & .label-text {
           color: var(--color-text-light);
         }
       }
 
-      & h5 {
+      & .heading-5 {
         position: relative;
 
         &::before {
@@ -670,7 +675,7 @@ p {
       }
     }
 
-    & p {
+    & .label-text {
       margin-bottom: var(--space-20);
     }
   }
@@ -692,7 +697,7 @@ p {
       background-color: var(--color-text-body);
     }
 
-    & > div {
+    & > .testimonial {
       display: flex;
       flex-direction: column;
     }
@@ -766,22 +771,22 @@ p {
       grid-template-columns: repeat(3, 1fr);
       gap: 0;
 
-      & > div {
+      & > .tab {
         padding: var(--space-16) var(--space-12);
         height: 113px;
 
-        &.active {
-          & h5 {
+        &[aria-selected="true"] {
+          & .heading-5 {
             &::before {
               background-color: var(--color-text-muted);
             }
           }
-          & p {
+          & .label-text {
             color: var(--color-text-muted);
           }
         }
 
-        & h5 {
+        & .heading-5 {
           padding: var(--space-8) 0;
           margin: 0;
           color: var(--color-text-primary);
@@ -792,7 +797,7 @@ p {
           }
         }
 
-        & p {
+        & .label-text {
           color: var(--color-text-muted);
           margin-bottom: 0;
         }
