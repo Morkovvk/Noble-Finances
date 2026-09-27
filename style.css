@@ -127,6 +127,7 @@ p {
   --space-80: 5rem; /* 80px */
   --space-96: 6rem; /* 96px */
   --space-120: 7.5rem; /* 120px */
+  --space-240: 15rem; /*240px */
 }
 
 .btn {
@@ -316,8 +317,6 @@ h3 {
 }
 
 .site-nav--footer {
-  padding: 0 0 236px;
-
   & ul {
     gap: 0;
     font-size: 0.75rem;
@@ -355,8 +354,6 @@ h3 {
   }
 
   .site-nav--footer {
-    padding-bottom: 232px;
-
     & ul {
       gap: var(--space-120);
       display: flex;
@@ -385,7 +382,6 @@ h3 {
   }
 
   .site-nav--footer {
-    padding-bottom: var(--space-80);
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -714,7 +710,6 @@ p {
       display: flex;
       align-items: center;
       gap: var(--space-16);
-      margin-bottom: 186px;
 
       & img {
         width: 48px;
@@ -813,10 +808,6 @@ p {
 
       & blockquote {
         font-size: 1.2rem;
-      }
-
-      & .test-author {
-        margin-bottom: 0;
       }
     }
   }
@@ -1061,10 +1052,18 @@ p {
   background-color: var(--color-text-primary);
   color: var(--color-bg-white);
   padding: var(--space-32) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-240);
+
+  & .container {
+    width: 100%;
+  }
 }
 .footer-about {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .footer-meta > * {
   display: flex;
@@ -1078,6 +1077,9 @@ p {
 }
 
 @media (max-width: 799px) {
+  .foot {
+    gap: var(--space-80);
+  }
   .footer-meta {
     padding-bottom: var(--space-24);
   }
